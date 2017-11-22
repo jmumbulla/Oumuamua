@@ -1,3 +1,11 @@
-clone_stat.R is to calculate the mean, median, and uncertainty of encounter parameters from clone5pc.Robj which is calculated by combine_clones.R in ffeng@stri-cluster.herts.ac.uk:/smp3/ffeng/scattering/Oumuamua_result/combine_clones.R
-combine_clones.R combine all Robjs in the local folder which are calculated by clone_enc.R in /home/ffeng/scattering/Oumuamua/results
+enc5pc_all.csv
+The file includes encounter parameters and data. 
 
+enc5pc_final.csv
+The file includes encounter parameters. 
+
+col_allname.txt
+The file discribes the column names of the table in enc5pc_all.csv
+
+col_allname.txt
+The file discribes the column names of the table in enc5pc_final.csv
