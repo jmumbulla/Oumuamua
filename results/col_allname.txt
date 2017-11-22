@@ -1,0 +1,36 @@
+Column names: Meaning
+TGAS.ID: TGAS id
+HIP.ID: Hipparcos id
+cat: catalog name; ref. Feng & Jones 2017, arXiv:1707.05277
+ra: Right ascension (ICRS, Equinox=J2000.0) at Epoch=J2000 [degree]
+dec: Declination (ICRS, Equinox=J2000.0) at Epoch=J2000 [degree]
+parallax: Trigonometric parallax [mas]
+pmra: Proper motion in RA, J2000 [mas/yr]
+pmdec: Proper motion in DE, J2000 [mas/yr]
+ra_error: Mean error of RA [mas]
+dec_error: Mean error of DE [mas]
+parallax_error: Standard error in parallax
+pmra_error: Standard error in pmra
+pmdec_error: Standard error in pmdec
+ra_dec_corr: Correlation, ra/dec
+ra_parallax_corr: Correlation, ra/parallax
+ra_pmra_corr: Correlation, ra/pmra
+ra_pmdec_corr: Correlation, ra/pmdec
+dec_parallax_corr: Correlation, dec/parallax
+dec_pmra_corr: Correlation, dec/pmra
+dec_pmdec_corr: Correlation, dec/pmdec
+parallax_pmra_corr: Correlation, parallax/pmra
+parallax_pmdec_corr: Correlation, parallax/pmdec
+pmra_pmdec_corr: Correlation, pmra/pmdec
+rv: Radial velocity [km/s]
+erv: Standard error in rv [km/s]
+qrv: quality of rv from the literature (For xh and xt objects, from good to bad: A, B, C, D; for rt and rh objects, the value is StdDev_HRV in RAVE DR5, representing the standard deviation in HRV from 10 resampled spectra)
+tenc: Encounter time [Myr]
+tenc.5per: 5% quantile of tenc [Myr]
+tenc.95per: 95% quantile of tenc [Myr]
+denc: Encounter distance [pc]
+denc.5per: 5% quantile of denc [pc]
+denc.95per: 95% quantile of denc [pc]
+venc: Encounter velocity [km/s]
+venc.5per: 5% quantile of venc
+venc.95per: 95% quantile of venc

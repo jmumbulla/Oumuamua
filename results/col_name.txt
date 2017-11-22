@@ -1,0 +1,13 @@
+Column names: Meaning
+TGAS.ID: TGAS id
+HIP.ID: Hipparcos id
+cat: catalog name; ref. Feng & Jones 2017, arXiv:1707.05277
+tenc: Encounter time [Myr]
+tenc.5per: 5% quantile of tenc [Myr]
+tenc.95per: 95% quantile of tenc [Myr]
+denc: Encounter distance [pc]
+denc.5per: 5% quantile of denc [pc]
+denc.95per: 95% quantile of denc [pc]
+venc: Encounter velocity [km/s]
+venc.5per: 5% quantile of venc
+venc.95per: 95% quantile of venc

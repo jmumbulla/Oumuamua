@@ -119,19 +119,19 @@ Potg <- function(R,z,parameters){
 }
 ###########the perturbation of spiral arms
 phis <- function(time,R,phi,state,arm.par,parameters){
-    t <- time
-    R0 <- state$R
-    phidot <- state$phidot*1000
-    alpha <- arm.par$alpha
-    m <- arm.par$m
-    Rmin <- arm.par$Rmin
-    Omegap <- arm.par$Vp
-    A <- 0.1*(phidot*R0)^2/(m*alpha)
-    chi <- m*(alpha*log(R/Rmin)-phi+Omegap*t)
-                                        #print(chi)
-    phis <- -A*cos(chi)
-    return(phis)
-}
+        t <- time
+        R0 <- state$R
+        phidot <- state$phidot*1000
+        alpha <- arm.par$alpha
+        m <- arm.par$m
+        Rmin <- arm.par$Rmin
+        Omegap <- arm.par$Vp
+        A <- 0.1*(phidot*R0)^2/(m*alpha)
+        chi <- m*(alpha*log(R/Rmin)-phi+Omegap*t)
+        #print(chi)
+        phis <- -A*cos(chi)
+        return(phis)
+        }
 
 ###the axisymmetric galactic density amplitude
 dena <- function(R,z,state,arm.par){
@@ -2491,4 +2491,24 @@ binG <- function(ts,gs,dN,method='sum'){
         tt[k] <- median(ts[inds])
     }
     cbind(tt,gg)
+}
+
+clone.stat <- function(x){
+    x1=Mode(x)
+    x2=mean(x)
+    x3=sd(x)
+    x4=skewness(x)
+    x5=kurtosis(x)
+    x6=median(x)
+    xs = sort(x)
+    x1per = max(min(xs),xs[floor(length(xs)*0.01)])
+    x99per = min(xs[ceiling(length(xs)*0.99)],max(xs))
+    x5per = max(min(xs),xs[floor(length(xs)*0.05)])
+    x95per = min(xs[ceiling(length(xs)*0.95)],max(xs))
+    x10per = max(min(xs),xs[floor(length(xs)*0.1)])
+    x90per = min(xs[ceiling(length(xs)*0.9)],max(xs))
+    xminus.1sig = max(min(xs),xs[floor(length(xs)*0.15865)])
+    xplus.1sig = min(xs[ceiling(length(xs)*(1-0.15865))],max(xs))
+    tmp <- c(x1per=x1per,x99per=x99per,x10per=x10per,x90per=x90per,x5per=x5per,x95per=x95per,xminus.1sig=xminus.1sig,xplus.1sig=xplus.1sig,mode=x1,mean=x2,median=x6,sd=x3,skewness=x4,kurtosis=x5)
+    return(tmp)
 }

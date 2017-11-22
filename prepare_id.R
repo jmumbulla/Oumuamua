@@ -88,7 +88,7 @@ sun.static <- FALSE
 fix.sun <- TRUE
 ####load files
 if(!LA){
-#file <- 'combined7cat_v1_err1.csv'
+#file <- 'data/combined7cat_v1_err1.csv'
 file <- 'results/enc5pc.csv'
 #if(!exists('tab')){
     tab <- read.csv(file,check.names=FALSE)
