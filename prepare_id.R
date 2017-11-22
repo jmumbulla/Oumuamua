@@ -9,7 +9,7 @@ if(length(args)>0){
 }
 ind22 <- ind11
 dt <- 1e-2
-tmin <- -100
+tmin <- -1
 tmax <- 0#Myr
 dt0 <- -(2017-1600)/1e6#From 2016-Dec-12 to 1599-Dec-12
 ind.max <- 2
